@@ -1,0 +1,8 @@
+[package]
+authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
+name = "stm32f40x"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.2.4"
+vcell = "0.1.0"
