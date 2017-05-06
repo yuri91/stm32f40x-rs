@@ -1,7 +1,8 @@
 # `stm32f40x`
 > Peripheral access API for STM32F40X microcontrollers
 
-![crates.io badge](https://img.shields.io/crates/v/stm32f40x.svg)
+[![crates.io](https://img.shields.io/crates/v/stm32f40x.svg)](https://crates.io/crates/stm32f40x)
+
 
 Generated using [svd2rust] v0.7.0 from [STM32F40x.svd], which has been edited
 to add, `writeConstraint` and `enumeratedValues` types where applicable.
