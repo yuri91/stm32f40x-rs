@@ -1,6 +1,7 @@
 [package]
 authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
 name = "stm32f40x"
+description = "Peripheral access API for STM32F40X microcontrollers"
 documentation = "https://docs.rs/stm32f40x"
 keywords = ["no-std", "arm", "cortex-m", "stm32"]
 license = "MIT OR Apache-2.0"
