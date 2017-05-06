@@ -3,8 +3,8 @@
 
 ![crates.io badge](https://img.shields.io/crates/v/stm32f40x.svg)
 
-Generated using [svd2rust] v0.7.0 from [STM32F0xx.svd], which has been edited
-to add, `writeConstraint`s and `enumeratedValues` types where applicable.
+Generated using [svd2rust] v0.7.0 from [STM32F40x.svd], which has been edited
+to add, `writeConstraint` and `enumeratedValues` types where applicable.
 
 [STM32F0xx.svd]: resources/STM32F40x.svd
 [svd2rust]: https://github.com/japaric/svd2rust
