@@ -22098,6 +22098,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <description>Update interrupt enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues>
+		<name>ENABLED</name>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Clock disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Clock enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+	      </enumeratedValues>
             </field>
           </fields>
         </register>
