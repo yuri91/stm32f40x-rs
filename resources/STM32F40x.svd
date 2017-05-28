@@ -6357,18 +6357,35 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <description>TIM11 clock enable</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues>
+		<name>ENABLED</name>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Clock disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Clock enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TIM10EN</name>
               <description>TIM10 clock enable</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>TIM9EN</name>
               <description>TIM9 clock enable</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>SYSCFGEN</name>
@@ -6376,60 +6393,80 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               enable</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>SPI1EN</name>
               <description>SPI1 clock enable</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>SDIOEN</name>
               <description>SDIO clock enable</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>ADC3EN</name>
               <description>ADC3 clock enable</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>ADC2EN</name>
               <description>ADC2 clock enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>ADC1EN</name>
               <description>ADC1 clock enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>USART6EN</name>
               <description>USART6 clock enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>USART1EN</name>
               <description>USART1 clock enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>TIM8EN</name>
               <description>TIM8 clock enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>TIM1EN</name>
               <description>TIM1 clock enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
           </fields>
         </register>
