@@ -5956,99 +5956,6 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               enable</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>OTGHSEN</name>
-              <description>USB OTG HS clock enable</description>
-              <bitOffset>29</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>ETHMACPTPEN</name>
-              <description>Ethernet PTP clock enable</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>ETHMACRXEN</name>
-              <description>Ethernet Reception clock
-              enable</description>
-              <bitOffset>27</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>ETHMACTXEN</name>
-              <description>Ethernet Transmission clock
-              enable</description>
-              <bitOffset>26</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>ETHMACEN</name>
-              <description>Ethernet MAC clock enable</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DMA2EN</name>
-              <description>DMA2 clock enable</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DMA1EN</name>
-              <description>DMA1 clock enable</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>BKPSRAMEN</name>
-              <description>Backup SRAM interface clock
-              enable</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>CRCEN</name>
-              <description>CRC clock enable</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIOIEN</name>
-              <description>IO port I clock enable</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIOHEN</name>
-              <description>IO port H clock enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIOGEN</name>
-              <description>IO port G clock enable</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIOFEN</name>
-              <description>IO port F clock enable</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIOEEN</name>
-              <description>IO port E clock enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>GPIODEN</name>
-              <description>IO port D clock enable</description>
-              <bitOffset>3</bitOffset>
-	      <bitWidth>1</bitWidth>
 	      <enumeratedValues>
 		<name>ENABLED</name>
                 <enumeratedValue>
@@ -6064,22 +5971,151 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               </enumeratedValues>
             </field>
             <field>
+              <name>OTGHSEN</name>
+              <description>USB OTG HS clock enable</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ETHMACPTPEN</name>
+              <description>Ethernet PTP clock enable</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ETHMACRXEN</name>
+              <description>Ethernet Reception clock
+              enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ETHMACTXEN</name>
+              <description>Ethernet Transmission clock
+              enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>ETHMACEN</name>
+              <description>Ethernet MAC clock enable</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DMA2EN</name>
+              <description>DMA2 clock enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DMA1EN</name>
+              <description>DMA1 clock enable</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BKPSRAMEN</name>
+              <description>Backup SRAM interface clock
+              enable</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CRCEN</name>
+              <description>CRC clock enable</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIOIEN</name>
+              <description>IO port I clock enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIOHEN</name>
+              <description>IO port H clock enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIOGEN</name>
+              <description>IO port G clock enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIOFEN</name>
+              <description>IO port F clock enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIOEEN</name>
+              <description>IO port E clock enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GPIODEN</name>
+              <description>IO port D clock enable</description>
+              <bitOffset>3</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
+            </field>
+            <field>
               <name>GPIOCEN</name>
               <description>IO port C clock enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>GPIOBEN</name>
               <description>IO port B clock enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>GPIOAEN</name>
               <description>IO port A clock enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6098,6 +6134,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <description>USB OTG FS clock enable</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues>
+		<name>ENABLED</name>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Clock disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Clock enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RNGEN</name>
@@ -6105,12 +6154,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               enable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
             <field>
               <name>DCMIEN</name>
               <description>Camera interface enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues derivedFrom="ENABLED">
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6130,6 +6183,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               clock enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+	      <enumeratedValues>
+		<name>ENABLED</name>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Clock disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Clock enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
