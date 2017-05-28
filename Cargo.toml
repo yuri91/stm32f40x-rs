@@ -6,7 +6,7 @@ documentation = "https://docs.rs/stm32f40x"
 keywords = ["no-std", "arm", "cortex-m", "stm32"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/yuri91/stm32f40x-rs"
-version = "0.1.3"
+version = "0.1.4"
 
 [dependencies]
 cortex-m = "0.2.4"
