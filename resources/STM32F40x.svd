@@ -8612,6 +8612,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                <name>MODE</name>
+                <enumeratedValue>
+                  <name>Input</name>
+                  <description>Input mode (reset state)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Output</name>
+                  <description>General purpose output mode</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Alternate</name>
+                  <description>Alternate function mode</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Analog</name>
+                  <description>Analog mode</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODER14</name>
@@ -8619,6 +8642,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER13</name>
@@ -8626,6 +8651,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER12</name>
@@ -8633,6 +8660,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER11</name>
@@ -8640,6 +8669,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER10</name>
@@ -8647,6 +8678,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER9</name>
@@ -8654,6 +8687,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER8</name>
@@ -8661,6 +8696,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER7</name>
@@ -8668,6 +8705,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER6</name>
@@ -8675,6 +8714,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER5</name>
@@ -8682,6 +8723,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER4</name>
@@ -8689,6 +8732,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER3</name>
@@ -8696,6 +8741,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER2</name>
@@ -8703,6 +8750,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER1</name>
@@ -8710,6 +8759,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER0</name>
@@ -8717,6 +8768,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -9868,6 +9921,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                <name>MODE</name>
+                <enumeratedValue>
+                  <name>Input</name>
+                  <description>Input mode (reset state)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Output</name>
+                  <description>General purpose output mode</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Alternate</name>
+                  <description>Alternate function mode</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Analog</name>
+                  <description>Analog mode</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODER14</name>
@@ -9875,6 +9951,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER13</name>
@@ -9882,6 +9960,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER12</name>
@@ -9889,6 +9969,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER11</name>
@@ -9896,6 +9978,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER10</name>
@@ -9903,6 +9987,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER9</name>
@@ -9910,6 +9996,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER8</name>
@@ -9917,6 +10005,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER7</name>
@@ -9924,6 +10014,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER6</name>
@@ -9931,6 +10023,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER5</name>
@@ -9938,6 +10032,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER4</name>
@@ -9945,6 +10041,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER3</name>
@@ -9952,6 +10050,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER2</name>
@@ -9959,6 +10059,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER1</name>
@@ -9966,6 +10068,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
             <field>
               <name>MODER0</name>
@@ -9973,6 +10077,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="MODE">
+	      </enumeratedValues>
             </field>
           </fields>
         </register>
