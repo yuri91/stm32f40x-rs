@@ -132,7 +132,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>DCMI</name>
+        <name>DCMI_IRQ</name>
         <description>DCMI global interrupt</description>
         <value>78</value>
       </interrupt>
@@ -594,7 +594,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>FSMC</name>
+        <name>FSMC_IRQ</name>
         <description>FSMC global interrupt</description>
         <value>48</value>
       </interrupt>
@@ -2303,42 +2303,42 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>DMA2_Stream0</name>
+        <name>DMA2_Stream0_IRQ</name>
         <description>DMA2 Stream0 global interrupt</description>
         <value>56</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream1</name>
+        <name>DMA2_Stream1_IRQ</name>
         <description>DMA2 Stream1 global interrupt</description>
         <value>57</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream2</name>
+        <name>DMA2_Stream2_IRQ</name>
         <description>DMA2 Stream2 global interrupt</description>
         <value>58</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream3</name>
+        <name>DMA2_Stream3_IRQ</name>
         <description>DMA2 Stream3 global interrupt</description>
         <value>59</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream4</name>
+        <name>DMA2_Stream4_IRQ</name>
         <description>DMA2 Stream4 global interrupt</description>
         <value>60</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream5</name>
+        <name>DMA2_Stream5_IRQ</name>
         <description>DMA2 Stream5 global interrupt</description>
         <value>68</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream6</name>
+        <name>DMA2_Stream6_IRQ</name>
         <description>DMA2 Stream6 global interrupt</description>
         <value>69</value>
       </interrupt>
       <interrupt>
-        <name>DMA2_Stream7</name>
+        <name>DMA2_Stream7_IRQ</name>
         <description>DMA2 Stream7 global interrupt</description>
         <value>70</value>
       </interrupt>
@@ -4981,42 +4981,42 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>DMA1</name>
       <baseAddress>0x40026000</baseAddress>
       <interrupt>
-        <name>DMA1_Stream0</name>
+        <name>DMA1_Stream0_IRQ</name>
         <description>DMA1 Stream0 global interrupt</description>
         <value>11</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream1</name>
+        <name>DMA1_Stream1_IRQ</name>
         <description>DMA1 Stream1 global interrupt</description>
         <value>12</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream2</name>
+        <name>DMA1_Stream2_IRQ</name>
         <description>DMA1 Stream2 global interrupt</description>
         <value>13</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream3</name>
+        <name>DMA1_Stream3_IRQ</name>
         <description>DMA1 Stream3 global interrupt</description>
         <value>14</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream4</name>
+        <name>DMA1_Stream4_IRQ</name>
         <description>DMA1 Stream4 global interrupt</description>
         <value>15</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream5</name>
+        <name>DMA1_Stream5_IRQ</name>
         <description>DMA1 Stream5 global interrupt</description>
         <value>16</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream6</name>
+        <name>DMA1_Stream6_IRQ</name>
         <description>DMA1 Stream6 global interrupt</description>
         <value>17</value>
       </interrupt>
       <interrupt>
-        <name>DMA1_Stream7</name>
+        <name>DMA1_Stream7_IRQ</name>
         <description>DMA1 Stream7 global interrupt</description>
         <value>47</value>
       </interrupt>
@@ -5032,7 +5032,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>RCC</name>
+        <name>RCC_IRQ</name>
         <description>RCC global interrupt</description>
         <value>5</value>
       </interrupt>
@@ -8212,6 +8212,10 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <description>Port x set bit y (y=
+              0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SET</name>
                 <usage>write</usage>
@@ -9472,6 +9476,15 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>RESET</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Reset</name>
+                  <description>Resets the corresponding ODRx bit</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BR14</name>
@@ -9479,6 +9492,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR13</name>
@@ -9486,6 +9501,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR12</name>
@@ -9493,6 +9510,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR11</name>
@@ -9500,6 +9519,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR10</name>
@@ -9507,6 +9528,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR9</name>
@@ -9514,6 +9537,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR8</name>
@@ -9521,6 +9546,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR7</name>
@@ -9528,6 +9555,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR6</name>
@@ -9535,6 +9564,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR5</name>
@@ -9542,6 +9573,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR4</name>
@@ -9549,6 +9582,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR3</name>
@@ -9556,6 +9591,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR2</name>
@@ -9563,6 +9600,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR1</name>
@@ -9570,6 +9609,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR0</name>
@@ -9577,6 +9618,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS15</name>
@@ -9584,6 +9627,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <description>Port x set bit y (y=
+              0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>SET</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Set</name>
+                  <description>Sets the corresponding ODRx bit</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BS14</name>
@@ -9591,6 +9647,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS13</name>
@@ -9598,6 +9656,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS12</name>
@@ -9605,6 +9665,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS11</name>
@@ -9612,6 +9674,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS10</name>
@@ -9619,6 +9683,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS9</name>
@@ -9626,6 +9692,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS8</name>
@@ -9633,6 +9701,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS7</name>
@@ -9640,6 +9710,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS6</name>
@@ -9647,6 +9719,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS5</name>
@@ -9654,6 +9728,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS4</name>
@@ -9661,6 +9737,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS3</name>
@@ -9668,6 +9746,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS2</name>
@@ -9675,6 +9755,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS1</name>
@@ -9682,6 +9764,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS0</name>
@@ -9689,6 +9773,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -10781,6 +10867,15 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>RESET</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Reset</name>
+                  <description>Resets the corresponding ODRx bit</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BR14</name>
@@ -10788,6 +10883,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR13</name>
@@ -10795,6 +10892,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR12</name>
@@ -10802,6 +10901,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR11</name>
@@ -10809,6 +10910,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR10</name>
@@ -10816,6 +10919,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR9</name>
@@ -10823,6 +10928,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR8</name>
@@ -10830,6 +10937,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR7</name>
@@ -10837,6 +10946,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR6</name>
@@ -10844,6 +10955,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR5</name>
@@ -10851,6 +10964,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR4</name>
@@ -10858,6 +10973,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR3</name>
@@ -10865,6 +10982,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR2</name>
@@ -10872,6 +10991,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR1</name>
@@ -10879,6 +11000,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BR0</name>
@@ -10886,6 +11009,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="RESET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS15</name>
@@ -10893,6 +11018,19 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <description>Port x set bit y (y=
+              0..15)</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>SET</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Set</name>
+                  <description>Sets the corresponding ODRx bit</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BS14</name>
@@ -10900,6 +11038,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS13</name>
@@ -10907,6 +11047,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS12</name>
@@ -10914,6 +11056,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS11</name>
@@ -10921,6 +11065,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS10</name>
@@ -10928,6 +11074,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS9</name>
@@ -10935,6 +11083,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS8</name>
@@ -10942,6 +11092,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS7</name>
@@ -10949,6 +11101,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS6</name>
@@ -10956,6 +11110,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS5</name>
@@ -10963,6 +11119,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS4</name>
@@ -10970,6 +11128,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS3</name>
@@ -10977,6 +11137,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS2</name>
@@ -10984,6 +11146,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS1</name>
@@ -10991,6 +11155,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
             <field>
               <name>BS0</name>
@@ -10998,6 +11164,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               0..15)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="SET">
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -11514,7 +11682,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SPI1</name>
+        <name>SPI1_IRQ</name>
         <description>SPI1 global interrupt</description>
         <value>35</value>
       </interrupt>
@@ -11911,7 +12079,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>SPI2</name>
       <baseAddress>0x40003800</baseAddress>
       <interrupt>
-        <name>SPI2</name>
+        <name>SPI2_IRQ</name>
         <description>SPI2 global interrupt</description>
         <value>36</value>
       </interrupt>
@@ -11920,7 +12088,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>SPI3</name>
       <baseAddress>0x40003C00</baseAddress>
       <interrupt>
-        <name>SPI3</name>
+        <name>SPI3_IRQ</name>
         <description>SPI3 global interrupt</description>
         <value>51</value>
       </interrupt>
@@ -11945,7 +12113,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SDIO</name>
+        <name>SDIO_IRQ</name>
         <description>SDIO global interrupt</description>
         <value>49</value>
       </interrupt>
@@ -12797,7 +12965,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>ADC</name>
+        <name>ADC_IRQ</name>
         <description>ADC1 global interrupt</description>
         <value>18</value>
       </interrupt>
@@ -13485,7 +13653,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>ADC2</name>
       <baseAddress>0x40012100</baseAddress>
       <interrupt>
-        <name>ADC</name>
+        <name>ADC_IRQ</name>
         <description>ADC2 global interrupts</description>
         <value>18</value>
       </interrupt>
@@ -13494,7 +13662,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>ADC3</name>
       <baseAddress>0x40012200</baseAddress>
       <interrupt>
-        <name>ADC</name>
+        <name>ADC_IRQ</name>
         <description>ADC3 global interrupts</description>
         <value>18</value>
       </interrupt>
@@ -13511,7 +13679,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>USART6</name>
+        <name>USART6_IRQ</name>
         <description>USART6 global interrupt</description>
         <value>71</value>
       </interrupt>
@@ -13920,7 +14088,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>USART1</name>
       <baseAddress>0x40011000</baseAddress>
       <interrupt>
-        <name>USART1</name>
+        <name>USART1_IRQ</name>
         <description>USART1 global interrupt</description>
         <value>37</value>
       </interrupt>
@@ -13929,7 +14097,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>USART2</name>
       <baseAddress>0x40004400</baseAddress>
       <interrupt>
-        <name>USART2</name>
+        <name>USART2_IRQ</name>
         <description>USART2 global interrupt</description>
         <value>38</value>
       </interrupt>
@@ -13938,7 +14106,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>USART3</name>
       <baseAddress>0x40004800</baseAddress>
       <interrupt>
-        <name>USART3</name>
+        <name>USART3_IRQ</name>
         <description>USART3 global interrupt</description>
         <value>39</value>
       </interrupt>
@@ -13954,7 +14122,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM6_DAC</name>
+        <name>TIM6_DAC_IRQ</name>
         <description>TIM6 global interrupt, DAC1 and DAC2 underrun
         error interrupt</description>
         <value>54</value>
@@ -14368,7 +14536,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>PVD</name>
+        <name>PVD_IRQ</name>
         <description>PVD through EXTI line detection
         interrupt</description>
         <value>1</value>
@@ -14509,12 +14677,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2C3_EV</name>
+        <name>I2C3_EV_IRQ</name>
         <description>I2C3 event interrupt</description>
         <value>72</value>
       </interrupt>
       <interrupt>
-        <name>I2C3_ER</name>
+        <name>I2C3_ER_IRQ</name>
         <description>I2C3 error interrupt</description>
         <value>73</value>
       </interrupt>
@@ -14971,12 +15139,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>I2C2</name>
       <baseAddress>0x40005800</baseAddress>
       <interrupt>
-        <name>I2C2_EV</name>
+        <name>I2C2_EV_IRQ</name>
         <description>I2C2 event interrupt</description>
         <value>33</value>
       </interrupt>
       <interrupt>
-        <name>I2C2_ER</name>
+        <name>I2C2_ER_IRQ</name>
         <description>I2C2 error interrupt</description>
         <value>34</value>
       </interrupt>
@@ -14985,12 +15153,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>I2C1</name>
       <baseAddress>0x40005400</baseAddress>
       <interrupt>
-        <name>I2C1_EV</name>
+        <name>I2C1_EV_IRQ</name>
         <description>I2C1 event interrupt</description>
         <value>31</value>
       </interrupt>
       <interrupt>
-        <name>I2C1_ER</name>
+        <name>I2C1_ER_IRQ</name>
         <description>I2C1 error interrupt</description>
         <value>32</value>
       </interrupt>
@@ -15097,7 +15265,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>WWDG</name>
+        <name>WWDG_IRQ</name>
         <description>Window Watchdog interrupt</description>
         <value>0</value>
       </interrupt>
@@ -15191,13 +15359,13 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>RTC_WKUP</name>
+        <name>RTC_WKUP_IRQ</name>
         <description>RTC Wakeup interrupt through the EXTI
         line</description>
         <value>3</value>
       </interrupt>
       <interrupt>
-        <name>RTC_Alarm</name>
+        <name>RTC_Alarm_IRQ</name>
         <description>RTC Alarms (A and B) through EXTI line
         interrupt</description>
         <value>41</value>
@@ -16517,7 +16685,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>UART4</name>
+        <name>UART4_IRQ</name>
         <description>UART4 global interrupt</description>
         <value>52</value>
       </interrupt>
@@ -16841,7 +17009,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>UART5</name>
       <baseAddress>0x40005000</baseAddress>
       <interrupt>
-        <name>UART5</name>
+        <name>UART5_IRQ</name>
         <description>UART5 global interrupt</description>
         <value>53</value>
       </interrupt>
@@ -17084,25 +17252,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM1_BRK_TIM9</name>
+        <name>TIM1_BRK_TIM9_IRQ</name>
         <description>TIM1 Break interrupt and TIM9 global
         interrupt</description>
         <value>24</value>
       </interrupt>
       <interrupt>
-        <name>TIM1_UP_TIM10</name>
+        <name>TIM1_UP_TIM10_IRQ</name>
         <description>TIM1 Update interrupt and TIM10 global
         interrupt</description>
         <value>25</value>
       </interrupt>
       <interrupt>
-        <name>TIM1_TRG_COM_TIM11</name>
+        <name>TIM1_TRG_COM_TIM11_IRQ</name>
         <description>TIM1 Trigger and Commutation interrupts and
         TIM11 global interrupt</description>
         <value>26</value>
       </interrupt>
       <interrupt>
-        <name>TIM1_CC</name>
+        <name>TIM1_CC_IRQ</name>
         <description>TIM1 Capture Compare interrupt</description>
         <value>27</value>
       </interrupt>
@@ -18186,25 +18354,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM8</name>
       <baseAddress>0x40010400</baseAddress>
       <interrupt>
-        <name>TIM8_BRK_TIM12</name>
+        <name>TIM8_BRK_TIM12_IRQ</name>
         <description>TIM8 Break interrupt and TIM12 global
         interrupt</description>
         <value>43</value>
       </interrupt>
       <interrupt>
-        <name>TIM8_UP_TIM13</name>
+        <name>TIM8_UP_TIM13_IRQ</name>
         <description>TIM8 Update interrupt and TIM13 global
         interrupt</description>
         <value>44</value>
       </interrupt>
       <interrupt>
-        <name>TIM8_TRG_COM_TIM14</name>
+        <name>TIM8_TRG_COM_TIM14_IRQ</name>
         <description>TIM8 Trigger and Commutation interrupts and
         TIM14 global interrupt</description>
         <value>45</value>
       </interrupt>
       <interrupt>
-        <name>TIM8_CC</name>
+        <name>TIM8_CC_IRQ</name>
         <description>TIM8 Capture Compare interrupt</description>
         <value>46</value>
       </interrupt>
@@ -18220,7 +18388,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM2</name>
+        <name>TIM2_IRQ</name>
         <description>TIM2 global interrupt</description>
         <value>28</value>
       </interrupt>
@@ -19161,7 +19329,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM3</name>
+        <name>TIM3_IRQ</name>
         <description>TIM3 global interrupt</description>
         <value>29</value>
       </interrupt>
@@ -20078,7 +20246,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM4</name>
       <baseAddress>0x40000800</baseAddress>
       <interrupt>
-        <name>TIM4</name>
+        <name>TIM4_IRQ</name>
         <description>TIM4 global interrupt</description>
         <value>30</value>
       </interrupt>
@@ -20094,7 +20262,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM5</name>
+        <name>TIM5_IRQ</name>
         <description>TIM5 global interrupt</description>
         <value>50</value>
       </interrupt>
@@ -21035,7 +21203,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM1_BRK_TIM9</name>
+        <name>TIM1_BRK_TIM9_IRQ</name>
         <description>TIM1 Break interrupt and TIM9 global
         interrupt</description>
         <value>24</value>
@@ -21521,7 +21689,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM12</name>
       <baseAddress>0x40001800</baseAddress>
       <interrupt>
-        <name>TIM8_BRK_TIM12</name>
+        <name>TIM8_BRK_TIM12_IRQ</name>
         <description>TIM8 Break interrupt and TIM12 global
         interrupt</description>
         <value>43</value>
@@ -21538,7 +21706,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM1_UP_TIM10</name>
+        <name>TIM1_UP_TIM10_IRQ</name>
         <description>TIM1 Update interrupt and TIM10 global
         interrupt</description>
         <value>25</value>
@@ -21842,7 +22010,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM13</name>
       <baseAddress>0x40001C00</baseAddress>
       <interrupt>
-        <name>TIM8_UP_TIM13</name>
+        <name>TIM8_UP_TIM13_IRQ</name>
         <description>TIM8 Update interrupt and TIM13 global
         interrupt</description>
         <value>44</value>
@@ -21852,7 +22020,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM14</name>
       <baseAddress>0x40002000</baseAddress>
       <interrupt>
-        <name>TIM8_TRG_COM_TIM14</name>
+        <name>TIM8_TRG_COM_TIM14_IRQ</name>
         <description>TIM8 Trigger and Commutation interrupts and
         TIM14 global interrupt</description>
         <value>45</value>
@@ -21869,7 +22037,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM1_TRG_COM_TIM11</name>
+        <name>TIM1_TRG_COM_TIM11_IRQ</name>
         <description>TIM1 Trigger and Commutation interrupts and
         TIM11 global interrupt</description>
         <value>26</value>
@@ -22198,7 +22366,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TIM6_DAC</name>
+        <name>TIM6_DAC_IRQ</name>
         <description>TIM6 global interrupt, DAC1 and DAC2 underrun
         error interrupt</description>
         <value>54</value>
@@ -22447,7 +22615,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>TIM7</name>
       <baseAddress>0x40001400</baseAddress>
       <interrupt>
-        <name>TIM7</name>
+        <name>TIM7_IRQ</name>
         <description>TIM7 global interrupt</description>
         <value>55</value>
       </interrupt>
@@ -22464,12 +22632,12 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>ETH</name>
+        <name>ETH_IRQ</name>
         <description>Ethernet global interrupt</description>
         <value>61</value>
       </interrupt>
       <interrupt>
-        <name>ETH_WKUP</name>
+        <name>ETH_WKUP_IRQ</name>
         <description>Ethernet Wakeup through EXTI line
         interrupt</description>
         <value>62</value>
@@ -24536,13 +24704,13 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>OTG_FS_WKUP</name>
+        <name>OTG_FS_WKUP_IRQ</name>
         <description>USB On-The-Go FS Wakeup through EXTI line
         interrupt</description>
         <value>42</value>
       </interrupt>
       <interrupt>
-        <name>OTG_FS</name>
+        <name>OTG_FS_IRQ</name>
         <description>USB On The Go FS global
         interrupt</description>
         <value>67</value>
@@ -29697,22 +29865,22 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>CAN1_TX</name>
+        <name>CAN1_TX_IRQ</name>
         <description>CAN1 TX interrupts</description>
         <value>19</value>
       </interrupt>
       <interrupt>
-        <name>CAN1_RX0</name>
+        <name>CAN1_RX0_IRQ</name>
         <description>CAN1 RX0 interrupts</description>
         <value>20</value>
       </interrupt>
       <interrupt>
-        <name>CAN1_RX1</name>
+        <name>CAN1_RX1_IRQ</name>
         <description>CAN1 RX1 interrupts</description>
         <value>21</value>
       </interrupt>
       <interrupt>
-        <name>CAN1_SCE</name>
+        <name>CAN1_SCE_IRQ</name>
         <description>CAN1 SCE interrupt</description>
         <value>22</value>
       </interrupt>
@@ -43137,22 +43305,22 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
       <name>CAN2</name>
       <baseAddress>0x40006800</baseAddress>
       <interrupt>
-        <name>CAN2_TX</name>
+        <name>CAN2_TX_IRQ</name>
         <description>CAN2 TX interrupts</description>
         <value>63</value>
       </interrupt>
       <interrupt>
-        <name>CAN2_RX0</name>
+        <name>CAN2_RX0_IRQ</name>
         <description>CAN2 RX0 interrupts</description>
         <value>64</value>
       </interrupt>
       <interrupt>
-        <name>CAN2_RX1</name>
+        <name>CAN2_RX1_IRQ</name>
         <description>CAN2 RX1 interrupts</description>
         <value>65</value>
       </interrupt>
       <interrupt>
-        <name>CAN2_SCE</name>
+        <name>CAN2_SCE_IRQ</name>
         <description>CAN2 SCE interrupt</description>
         <value>66</value>
       </interrupt>
@@ -43456,48 +43624,48 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TAMP_STAMP</name>
+        <name>TAMP_STAMP_IRQ</name>
         <description>Tamper and TimeStamp interrupts through the
         EXTI line</description>
         <value>2</value>
       </interrupt>
       <interrupt>
-        <name>EXTI0</name>
+        <name>EXTI0_IRQ</name>
         <description>EXTI Line0 interrupt</description>
         <value>6</value>
       </interrupt>
       <interrupt>
-        <name>EXTI1</name>
+        <name>EXTI1_IRQ</name>
         <description>EXTI Line1 interrupt</description>
         <value>7</value>
       </interrupt>
       <interrupt>
-        <name>EXTI2</name>
+        <name>EXTI2_IRQ</name>
         <description>EXTI Line2 interrupt</description>
         <value>8</value>
       </interrupt>
       <interrupt>
-        <name>EXTI3</name>
+        <name>EXTI3_IRQ</name>
         <description>EXTI Line3 interrupt</description>
         <value>9</value>
       </interrupt>
       <interrupt>
-        <name>EXTI4</name>
+        <name>EXTI4_IRQ</name>
         <description>EXTI Line4 interrupt</description>
         <value>10</value>
       </interrupt>
       <interrupt>
-        <name>EXTI9_5</name>
+        <name>EXTI9_5_IRQ</name>
         <description>EXTI Line[9:5] interrupts</description>
         <value>23</value>
       </interrupt>
       <interrupt>
-        <name>EXTI9_5</name>
+        <name>EXTI9_5_IRQ</name>
         <description>EXTI Line[9:5] interrupts</description>
         <value>23</value>
       </interrupt>
       <interrupt>
-        <name>EXTI15_10</name>
+        <name>EXTI15_10_IRQ</name>
         <description>EXTI Line[15:10] interrupts</description>
         <value>40</value>
       </interrupt>
@@ -44487,25 +44655,25 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <usage>reserved</usage>
       </addressBlock>
       <interrupt>
-        <name>OTG_HS_EP1_OUT</name>
+        <name>OTG_HS_EP1_OUT_IRQ</name>
         <description>USB On The Go HS End Point 1 Out global
         interrupt</description>
         <value>74</value>
       </interrupt>
       <interrupt>
-        <name>OTG_HS_EP1_IN</name>
+        <name>OTG_HS_EP1_IN_IRQ</name>
         <description>USB On The Go HS End Point 1 In global
         interrupt</description>
         <value>75</value>
       </interrupt>
       <interrupt>
-        <name>OTG_HS_WKUP</name>
+        <name>OTG_HS_WKUP_IRQ</name>
         <description>USB On The Go HS Wakeup through EXTI
         interrupt</description>
         <value>76</value>
       </interrupt>
       <interrupt>
-        <name>OTG_HS</name>
+        <name>OTG_HS_IRQ</name>
         <description>USB On The Go HS global
         interrupt</description>
         <value>77</value>
