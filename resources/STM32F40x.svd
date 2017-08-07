@@ -11429,6 +11429,37 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_CH1N</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM3_CH2</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM8_CH1N</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI1_MOSI</name>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM14_CH1</name>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ETH_MII_RX_DV_ETH_RMMI_CRS_DV</name>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL6</name>
@@ -11436,6 +11467,37 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_BKIN</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM3_CH1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM8_BKIN</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI1_MISO</name>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM13_CH1</name>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                <name>DCMI_PIXCK</name>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL5</name>
@@ -11443,6 +11505,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM2_CH1_ETR</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM8_CH1N</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI1_SCK</name>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_HS_ULPI_CK</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL4</name>
@@ -11450,6 +11535,34 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>SPI1_NSS</name>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI3_NSS_I2S3_WS</name>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART2_CK</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_HS_SOF</name>
+                  <value>12</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DCMI_HSYNC</name>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <description>EVENTOUT</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL3</name>
@@ -11457,6 +11570,38 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM2_CH4</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM5_CH5</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM9_CH2</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART2_RX</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_HS_ULPI_D0</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ETH_MII_COL</name>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <description>EVENTOUT</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL2</name>
@@ -11464,6 +11609,34 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM2_CH3</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM5_CH3</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM9_CH1</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART2_TX</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ETH_MDIO</name>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <description>EVENTOUT</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL1</name>
@@ -11471,6 +11644,33 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM2_CH2</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM5_CH2</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART2_RTS</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UART4_RX</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ETH_MII_RX_CLK_ETH_RMII_REF_CLK</name>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRL0</name>
@@ -11478,6 +11678,37 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 0..7)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM2_CH1_ETR</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM5_CH1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM8_ETR</name>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART2_CTS</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UART4_TX</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ETH_MII_CRS</name>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -11497,6 +11728,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>JTDI</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM2_CH1_TIM2_ETR</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI1_NSS</name>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SPI3_NSS_I2S3_WS</name>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH14</name>
@@ -11504,6 +11758,17 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>JTCK_SWDCLK</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH13</name>
@@ -11511,6 +11776,17 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>JTMS_SWDIO</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH12</name>
@@ -11518,6 +11794,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_ETR</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART1_RTS</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CAN1_TX</name>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_FS_DP</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH11</name>
@@ -11525,6 +11824,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_CH4</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART1_CTS</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CAN1_RX</name>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_FS_DM</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH10</name>
@@ -11532,6 +11854,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_CH3</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART1_RX</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_FS_ID</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DCMI_D1</name>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH9</name>
@@ -11539,6 +11884,29 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>TIM1_CH2</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>I2C3_SMBA</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART1_TX</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DCMI_D0</name>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFRH8</name>
@@ -11546,6 +11914,33 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               bit y (y = 8..15)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>AF</name>
+                <enumeratedValue>
+                  <name>MCO1</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIM1_CH1</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>I2C3_SCL</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USART1_CK</name>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OTG_FS_SOF</name>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EVENTOUT</name>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
