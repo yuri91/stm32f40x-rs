@@ -12272,6 +12272,50 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <description>Baud rate control</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                <name>DIVFACTOR</name>
+                <description>Dividor factor for Baud rate</description>
+                <enumeratedValue>
+                  <name>Div2</name>
+                  <description>Div PCLK by two</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div4</name>
+                  <description>Div PCLK by four</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div8</name>
+                  <description>Div PCLK by eight</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div16</name>
+                  <description>Div PCLK 16</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div32</name>
+                  <description>Div PCLK 32</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div64</name>
+                  <description>Div PCLK by 64</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div128</name>
+                  <description>Div PCLK by 128</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Div256</name>
+                  <description>Div PCLK by 256</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MSTR</name>
