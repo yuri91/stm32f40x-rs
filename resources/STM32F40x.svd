@@ -5,6 +5,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
   <name>STM32F40x</name>
   <version>1.5</version>
   <description>STM32F40x</description>
+  <cpu>
+    <name>CM4</name>
+    <revision>r1p1</revision>
+    <endian>little</endian>
+    <fpuPresent>true</fpuPresent>
+    <mpuPresent>false</mpuPresent>
+    <vtorPresent>true</vtorPresent>
+    <nvicPrioBits>4</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+  </cpu>
   <!--Bus Interface Properties-->
   <!--Cortex-M4 is byte addressable-->
   <addressUnitBits>8</addressUnitBits>
