@@ -4,7 +4,7 @@
 [![crates.io](https://img.shields.io/crates/v/stm32f40x.svg)](https://crates.io/crates/stm32f40x)
 
 
-Generated using [svd2rust] v0.11.1 from [STM32F40x.svd], which has been edited
+Generated using [svd2rust] v0.12.0 from [STM32F40x.svd], which has been edited
 to add, `writeConstraint` and `enumeratedValues` types where applicable.
 
 [STM32F40x.svd]: resources/STM32F40x.svd
